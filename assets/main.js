@@ -1,6 +1,8 @@
-document.querySelector("button").addEventListener("click", Name);
+document.querySelector("#btn").addEventListener("click", welcomemessage);
 
-function Name() {
-    let name = document.querySelector("input").value;
-    document.querySelector("p").innerHTML = 'Hello ${name} welcome to this Bootcamp!';
+function welcomemessage() {
+    let entry = document.querySelector("#input").value
+    let generatedElement = document.createElement("p");
+    generatedElement.textContent = `hello ${entry} welcome to the bootcamp`
+    document.querySelector('#demo').appendChild(generatedElement);
 }
